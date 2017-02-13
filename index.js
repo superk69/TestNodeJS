@@ -8,7 +8,6 @@ var request = require('request');
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
-app.use(express.bodyParser());
 app.use(cors());
 
 // views is directory for all template files
@@ -24,7 +23,7 @@ app.get('/cool',function(request, response) {
 });
 
 
-app.get('/weather', function(req, res){
+app.get('/weather', function(req, response){
 	request({url: 'http://api.wunderground.com/api/e1cb835416fecd99/conditions/q/TH/Ubon_Ratchathani.json', json:true}, function(err, res, json){
 		if (err) {
 			throw err;
