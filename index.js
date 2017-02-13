@@ -1,4 +1,5 @@
 var cool = require('cool-ascii-faces');
+var cors = require('cors');
 var express = require('express');
 var app = express();
 
@@ -7,6 +8,8 @@ var request = require('request');
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.bodyParser());
+app.use(cors());
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
@@ -20,11 +23,14 @@ app.get('/cool',function(request, response) {
 	response.send(cool());
 });
 
-request({url: 'http://api.wunderground.com/api/e1cb835416fecd99/conditions/q/TH/Ubon_Ratchathani.json', json:true}, function(err, res, json){
-	if (err) {
-		throw err;
-	}
-	responose.send(json);
+
+app.get('/weather', function(req, res){
+	request({url: 'http://api.wunderground.com/api/e1cb835416fecd99/conditions/q/TH/Ubon_Ratchathani.json', json:true}, function(err, res, json){
+		if (err) {
+			throw err;
+		}
+		response.send(json);
+	})
 });
 
 app.listen(app.get('port'), function() {
