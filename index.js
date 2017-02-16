@@ -48,11 +48,14 @@ app.post('/message', (req, res) => {
                               "\nTemperature: "+ JSON.stringify(jsonData.temperature_string) +
                               "\nWeather: "+JSON.stringify(jsonData.weather) +
                               "\nHumidity: "+JSON.stringify(jsonData.relative_humidity)
-                      }/*,{
-                        type: "image",
-                        originalContentUrl: "https://secret-hamlet-57052.herokuapp.co/image/LINE_logo.png",
-                        previewImageUrl: "https://secret-hamlet-57052.herokuapp.com/image/LINE_logo.png"
-                      }*/]
+                      },{
+								type: 'sticker',
+								stickerPackageId: 1,
+								stickerId: 113
+                      //  type: "image",
+                      //  originalContentUrl: "https://secret-hamlet-57052.herokuapp.co/image/LINE_logo.png",
+                      //  previewImageUrl: "https://secret-hamlet-57052.herokuapp.com/image/LINE_logo.png"
+                      }]
          };
         	var options = {
        		url: 'https://api.line.me/v2/bot/message/push',
