@@ -54,8 +54,8 @@ app.post('/message', (req, res) => {
                               "\nHumidity: "+JSON.stringify(jsonData.relative_humidity)
                       },{
 								type: 'image',
-								originalContentUrl: 'https://afternoon-retreat-55604.herokuapp.com/image/3.jpg',
-          					previewImageUrl: 'https://afternoon-retreat-55604.herokuapp.com/image/3.jpg'
+								originalContentUrl: 'https://afternoon-retreat-55604.herokuapp.com/images/3.jpg',
+          					previewImageUrl: 'https://afternoon-retreat-55604.herokuapp.com/images/3.jpg'
                       }]
          };
         	var options = {

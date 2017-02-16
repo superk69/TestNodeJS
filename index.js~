@@ -21,7 +21,7 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/image', function(request, response){
+app.get('/images', function(request, response){
 	respense.render(request);
 });
 
