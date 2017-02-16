@@ -71,6 +71,7 @@ app.post('/message', (req, res) => {
    		});
     	}
 	);
+	res.sendStatus(200);
 });
 
 app.listen(app.get('port'), function() {
