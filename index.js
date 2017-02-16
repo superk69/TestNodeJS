@@ -21,10 +21,6 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/image', function(request, response) {
-  response.render(request);
-});
-
 app.post('/message', (req, res) => {
   var text = req.body.events[0].message.text;
   var sender = req.body.events[0].source.userId;

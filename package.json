@@ -17,7 +17,7 @@
     "ejs": "2.4.1",
     "express": "4.13.3",
     "json-parser": "1.1.5",
-    "request": "2.79.0"
+    "request": "^2.79.0"
   },
   "repository": {
     "type": "git",
