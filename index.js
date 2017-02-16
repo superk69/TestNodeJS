@@ -43,11 +43,11 @@ app.post('/message', (req, res) => {
        		to: req.body.events[0].source.userId,
             messages: [{
              	          type: 'text',
-                        text: 'tet'/*"City: "+ JSON.stringify(jsonData.display_location.full) +
+                        text: "City: "+ JSON.stringify(jsonData.display_location.full) +
                               "\nTime: "+JSON.stringify(jsonData.local_time_rfc822) +
                               "\nTemperature: "+ JSON.stringify(jsonData.temperature_string) +
                               "\nWeather: "+JSON.stringify(jsonData.weather) +
-                              "\nHumidity: "+JSON.stringify(jsonData.relative_humidity)*/
+                              "\nHumidity: "+JSON.stringify(jsonData.relative_humidity)
                       }/*,{
                         type: "image",
                         originalContentUrl: "https://secret-hamlet-57052.herokuapp.co/image/LINE_logo.png",
