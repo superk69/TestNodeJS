@@ -49,9 +49,9 @@ app.post('/message', (req, res) => {
                               "\nWeather: "+JSON.stringify(jsonData.weather) +
                               "\nHumidity: "+JSON.stringify(jsonData.relative_humidity)
                       },{
-								type: 'sticker',
-								stickerPackageId: 1,
-								stickerId: 113
+								type: 'image',
+								originalContentUrl: 'http://hisasann.com/img/notechnonolife_character.jpeg',
+          					previewImageUrl: 'http://hisasann.com/img/notechnonolife_character.jpeg'
                       //  type: "image",
                       //  originalContentUrl: "https://secret-hamlet-57052.herokuapp.co/image/LINE_logo.png",
                       //  previewImageUrl: "https://secret-hamlet-57052.herokuapp.com/image/LINE_logo.png"
